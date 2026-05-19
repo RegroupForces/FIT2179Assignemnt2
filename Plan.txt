@@ -1,0 +1,13 @@
+Topic: Food
+Data source: world bank (tba) https://databank.worldbank.org/id/cf5e21a7
+Graphs: Price;
+	Production;
+	Production by type;
+	Consumption;
+	Consumption by type;
+	Compare with:
+		Population;
+		PPP,
+		GDP,
+		GDP per person,
+		
