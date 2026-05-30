@@ -24,7 +24,7 @@
 
         {
             "data": {
-            "url": "Data\\Agriculture, forestry, and fishing, value added (% of GDP).csv"
+            "url": "Data/Agriculture, forestry, and fishing, value added (% of GDP).csv"
             },
 
             "projection": {
@@ -37,7 +37,7 @@
 
                 "from": {
                     "data": {
-                    "url": "Data\\country-centroids.csv"
+                    "url": "Data/country-centroids.csv"
                     },
 
                     "key": "alpha3",
