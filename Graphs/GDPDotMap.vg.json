@@ -7,6 +7,17 @@
 
     "layer": [
         {
+          "data": {"sphere": true},
+          "mark": {
+            "type": "geoshape",
+            "fill": "lightblue"
+          },
+          "projection": {
+            "type": "equalEarth"
+          }
+        },
+
+        {
             "data": {
                 "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
                 "format": {
@@ -24,7 +35,7 @@
 
         {
             "data": {
-            "url": "Data/Agriculture, forestry, and fishing, value added (% of GDP)2025.csv"
+            "url": "Data/GDP2025.csv"
             },
 
             "projection": {
@@ -43,20 +54,18 @@
 
                     "fields": ["latitude", "longitude"]
                 }
-            },
-
-            {
-            "calculate": "'Data/wheat.png'",
-            "as": "img"
-        }
+            }
         ],
             "mark": {
-                "type": "image",
-                "width": 30,
-                "height": 30
+                "type": "text"
             },
 
             "encoding": {
+
+                "text": {
+                  "value": "🌾"
+                },
+
                 "longitude": {
                 "field": "longitude",
                 "type": "quantitative"
@@ -67,19 +76,10 @@
                 "type": "quantitative"
                 },
 
-                "url": {
-                    "field": "img"
-                },
-
-                "width": {
-                    "field": "2023",
-                    "type": "quantitative"
-                },
-
-                "height": {
-                    "field": "2023",
-                    "type": "quantitative"
-                }
+                "size": {
+                "field": "2023",
+                "type": "quantitative"
+                }   
 
             }
         }

@@ -1,4 +1,4 @@
-var vis1 = "porprotionalSymbol.json";
+var vis1 = "Graphs\GDPDotMap.vg.json";
 vegaEmbed('#dotMap', vis1);
 
 
