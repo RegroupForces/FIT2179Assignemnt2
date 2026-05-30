@@ -1,4 +1,4 @@
-var vis1 = "Graphs\GDPDotMap.vg.json";
+var vis1 = "Graphs\GDPDotMap.json";
 vegaEmbed('#PorpSymbolMap2023', vis1);
 
 
