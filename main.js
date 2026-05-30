@@ -1,5 +1,5 @@
 var vis1 = "Graphs\GDPDotMap.vg.json";
-vegaEmbed('#dotMap', vis1);
+vegaEmbed('#PorpSymbolMap2023', vis1);
 
 
 var foodImportVis = "foodImports.json";
