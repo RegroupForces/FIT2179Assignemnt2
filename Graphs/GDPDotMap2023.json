@@ -1,0 +1,92 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 800,
+    "height": 450,
+    "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  } ,
+    "description": "TBA",
+
+
+    "layer": [
+        {
+          "data": {"sphere": true},
+          "mark": {
+            "type": "geoshape",
+            "fill": "lightblue"
+          },
+          "projection": {
+            "type": "equalEarth"
+          }
+        },
+
+        {
+            "data": {
+                "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+                "format": {
+                "type": "topojson",
+                "feature": "countries"
+                }
+            },
+
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightyellow",
+                "stroke": "black"
+            }
+        },
+
+        {
+            "data": {
+            "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/GDP2023.csv"
+            },
+
+            "projection": {
+                "type": "equalEarth"
+            },
+            "transform": [
+                {
+                "lookup": "Country Code",
+
+                "from": {
+                    "data": {
+                    "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/country-centroids.csv"
+                    },
+
+                    "key": "alpha3",
+
+                    "fields": ["latitude", "longitude"]
+                }
+            }
+        ],
+            "mark": {
+                "type": "text"
+            },
+
+            "encoding": {
+
+                "text": {
+                  "value": "🌾"
+                },
+
+                "longitude": {
+                "field": "longitude",
+                "type": "quantitative"
+                },
+
+                "latitude": {
+                "field": "latitude",
+                "type": "quantitative"
+                },
+
+                "size": {
+                "field": "2023",
+                "type": "quantitative"
+                }   
+
+            }
+        }
+    ]
+   
+}

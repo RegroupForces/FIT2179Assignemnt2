@@ -39,7 +39,7 @@
 
         {
             "data": {
-            "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/GDP2025.csv"
+            "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/GDP2013.csv"
             },
 
             "projection": {
@@ -81,7 +81,7 @@
                 },
 
                 "size": {
-                "field": "2023",
+                "field": "2013",
                 "type": "quantitative"
                 }   
 
