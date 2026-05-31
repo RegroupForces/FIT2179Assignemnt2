@@ -50,6 +50,8 @@ h2 {
 }
 
 #PorpSymbolMap2023 {
+    height: 100%;
+    width: 100%;
     flex: 1;
     border: none;
     padding: 10px;
@@ -74,4 +76,8 @@ h2 {
     border-radius: 10px;
     padding: 20px 10%;
     display: block; 
+}
+
+#farmBackground {
+    background-image: url(https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/wheatBackground.png);
 }
