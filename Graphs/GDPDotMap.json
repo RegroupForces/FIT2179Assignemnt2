@@ -2,10 +2,25 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
     "width": 800,
     "height": 450,
+    "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  } ,
     "description": "TBA",
 
 
     "layer": [
+        {
+          "data": {"sphere": true},
+          "mark": {
+            "type": "geoshape",
+            "fill": "lightblue"
+          },
+          "projection": {
+            "type": "equalEarth"
+          }
+        },
+
         {
             "data": {
                 "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
@@ -17,26 +32,44 @@
 
             "mark": {
                 "type": "geoshape",
-                "fill": "lightgray",
-                "stroke": "white"
+                "fill": "lightyellow",
+                "stroke": "black"
             }
         },
 
         {
             "data": {
-            "url": "Data/Agriculture, forestry, and fishing, value added (% of GDP)2025.csv"
+            "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/GDP2025.csv"
             },
 
             "projection": {
                 "type": "equalEarth"
             },
+            "transform": [
+                {
+                "lookup": "Country Code",
 
+                "from": {
+                    "data": {
+                    "url": "https://raw.githubusercontent.com/RegroupForces/FIT2179Assignemnt2/main/Graphs/Data/country-centroids.csv"
+                    },
+
+                    "key": "alpha3",
+
+                    "fields": ["latitude", "longitude"]
+                }
+            }
+        ],
             "mark": {
-                "type": "circle",
-                "opacity": 0.7
+                "type": "text"
             },
 
             "encoding": {
+
+                "text": {
+                  "value": "🌾"
+                },
+
                 "longitude": {
                 "field": "longitude",
                 "type": "quantitative"
@@ -47,18 +80,11 @@
                 "type": "quantitative"
                 },
 
-
                 "size": {
                 "field": "2023",
-                "type": "quantitative",
-                "title": "Agriculture, forestry, and fishing, value added (% of GDP)"
-                },
+                "type": "quantitative"
+                }   
 
-                "color": {
-                "field": "YearVariable",
-                "type": "quantitative",
-                "title": "Year"
-                }
             }
         }
     ]

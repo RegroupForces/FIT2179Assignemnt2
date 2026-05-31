@@ -7,16 +7,7 @@ html, body{
 }
 
 
-div {
-    position: relative;
-    text-align: center;
-    height:500px;
-    border: solid 1px;
-    border-radius: 10px;
-    padding: 20px 20px;
-    display: block; 
-    margin: 10px 10% 10px 10%;
-}
+
 
 
 p {
@@ -43,6 +34,7 @@ h2 {
 #outer {
     display: flex;
     gap: 10px;
+    padding: 10px 10%;
 }
 
 #inner {
@@ -55,4 +47,31 @@ h2 {
     flex: 1;
     border: none;
     padding: 10px;
+}
+
+#PorpSymbolMap2023 {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+#block{
+    position: relative;
+    text-align: center;
+    height:500px;
+    width: 80%;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px 10%;
+    display: block; 
+    margin: 10px 10% 10px 10%;
+}
+#innerblock{
+    position: relative;
+    text-align: center;
+    height:500px;
+    width: 50%;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px 10%;
+    display: block; 
 }
